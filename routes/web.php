@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -24,3 +25,5 @@ Route::post('/login',[LoginController::class,'authenticate']);
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
 Route::post('/register',[RegisterController::class,'store']);
+
+Route::get('/dashboard',[AdminController::class,'index'])->name('dashboard');
